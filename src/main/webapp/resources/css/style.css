@@ -10,9 +10,9 @@ body{
     height: 400px;
     background: #283b7a63;
     text-align: center;
+    border-radius: 30px;
     animation: container 0.5s;
 	animation-fill-mode: forwards;
-	border-radius: 30px;
 }
 
 #title{
@@ -52,13 +52,13 @@ button.input{
 
 @keyframes container{
  	0% {width: 0px; opacity: 0%}
- 	10% {width: 50px;}
- 	25% {width: 100px;}
+ 	15% {width: 50px;}
+ 	30% {width: 100px;}
  	40% {width: 150px;}
  	50% {width: 200px;}
  	60% {width: 250px;}
- 	75% {width: 300px;}
- 	90% {width: 350px;}
+ 	70% {width: 300px;}
+ 	85% {width: 350px;}
  	100% {width: 400px;}
 }
 
