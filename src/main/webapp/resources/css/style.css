@@ -1,0 +1,75 @@
+@charset "ISO-8859-1";
+
+body{
+	font-family: georgia;
+	background: #abb2ff;
+}
+
+#container{
+	width: 400px;
+    height: 400px;
+    background: #283b7a63;
+    text-align: center;
+    animation: container 0.5s;
+	animation-fill-mode: forwards;
+	border-radius: 30px;
+}
+
+#title{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	margin: 0;
+	font-family: Gabriola;
+	font-size: 80px;
+	animation: form 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.login{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: form 0.5s;
+	animation-fill-mode: forwards;
+}
+
+form.login{
+	top: 55%;
+}
+
+.input{
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+}
+
+button.input{
+	width: 100%;
+	cursor: pointer;
+}
+
+@keyframes container{
+ 	0% {width: 0px; opacity: 0%}
+ 	10% {width: 50px;}
+ 	25% {width: 100px;}
+ 	40% {width: 150px;}
+ 	50% {width: 200px;}
+ 	60% {width: 250px;}
+ 	75% {width: 300px;}
+ 	90% {width: 350px;}
+ 	100% {width: 400px;}
+}
+
+@keyframes form{
+	0% {opacity: 0%;}
+	15% {opactity: 15%;}
+ 	30% {opactity: 30%;}
+ 	45% {opactity: 45%;}
+ 	60% {opactity: 60%;}
+ 	75% {opactity: 75%;}
+ 	90% {opactity: 90%;}
+ 	95% {opactity: 95%;}
+ 	100% {opactity: 100%;}
+}
