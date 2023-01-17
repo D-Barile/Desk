@@ -4,14 +4,13 @@
 
 <section>
 	<c:forEach var="w" items='<%=request.getAttribute("workers") %>'>
-		<div id="card">
-			<h1>Ciao</h1>
+		<div id="card${w.getId_worker()}" class="card">
 			<p hidden="true">${w.getId_worker()}</p>
 			<img alt="profile" src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
-			<h3>${w.getNome()}</h3>
-			<h3>${w.getCognome()}</h3>
-			<h4>${w.getEta()}</h4>
-			<h4>${w.getDescrizione()}</h4>
+			<h2>${w.getNome()}</h2>
+			<h2>${w.getCognome()}</h2>
+			<h3>${w.getEta()}</h3>
+			<p>${w.getDescrizione()}</p>
 		</div>
 	</c:forEach>
 </section>
