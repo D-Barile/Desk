@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+a{
+	top: 120px;
+	left: 20px;
+    position: absolute;
+    padding: 20px;
+    border-radius: 20px;
+	background: #edededd9;
+}
+
+#card{
+	width: 20%;
+    height: 400px;
+    background: red;
+    margin: 150px 50px;
+    border-radius: 15%;
+}

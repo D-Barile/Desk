@@ -9,27 +9,26 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "worker")
-
 public class Worker {
 	
 	@Id
-	@Column(name = "id_worker")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_worker;
+	private int id;
 	private String nome;
 	private String cognome;
 	private int eta;
+	private String descrizione;
 	
 	public Worker() {
 		
 	}
 
-	public Long getId_worker() {
-		return id_worker;
+	public int getId() {
+		return id;
 	}
 
-	public void setId_worker(Long id_worker) {
-		this.id_worker = id_worker;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -54,6 +53,14 @@ public class Worker {
 
 	public void setEta(int eta) {
 		this.eta = eta;
+	}
+	
+	public String getDescrizione() {
+		return descrizione;
+	}
+	
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
 	}
 	
 }

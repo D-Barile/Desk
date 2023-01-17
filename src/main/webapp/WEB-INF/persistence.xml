@@ -1,6 +1,6 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 	<persistence-unit name="desk">
-		<jta-data-source>conn_desk</jta-data-source>
+		<jta-data-source>conn-desk</jta-data-source>
 		<properties>
 			<property name="openejb.jpa.auto-scan" value="true"/>
 		</properties>

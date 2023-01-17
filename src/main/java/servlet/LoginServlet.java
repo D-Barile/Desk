@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 			}
 			HttpSession currentSession = req.getSession();
 			currentSession.setAttribute("user", paramUser);
-			currentSession.setMaxInactiveInterval(5);
+			currentSession.setMaxInactiveInterval(5 * 60);
 			resp.sendRedirect("index.jsp");
 		}else {
 			resp.sendRedirect("login.jsp");
