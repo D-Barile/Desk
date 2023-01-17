@@ -1,6 +1,5 @@
 package beans;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +12,7 @@ public class Worker {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id_worker;
 	private String nome;
 	private String cognome;
 	private int eta;
@@ -23,12 +22,13 @@ public class Worker {
 		
 	}
 
-	public int getId() {
-		return id;
+	public Long getId_worker() {
+		return id_worker;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+
+	public void setId_worker(Long id_worker) {
+		this.id_worker = id_worker;
 	}
 
 	public String getNome() {

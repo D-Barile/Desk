@@ -24,7 +24,7 @@ public class HomeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Worker> workers = service.getAll();
 		req.setAttribute("workers", workers);
-		req.getRequestDispatcher("/common/home.jsp");
+		req.getRequestDispatcher("/common/home.jsp").include(req, resp);
 	}
 	
 }
