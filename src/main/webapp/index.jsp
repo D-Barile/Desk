@@ -13,7 +13,8 @@
 		<%
 			}
 		%>
-		<link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/resources/css/login.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet" />
 	</head>
 	<body>
 		<%
@@ -24,6 +25,7 @@
 			}else{
 		%>
 				<jsp:include page="home.jsp"></jsp:include>
+				<jsp:include page="common/header.jsp"></jsp:include>
 		<%
 			}
 		%>

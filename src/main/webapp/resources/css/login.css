@@ -3,6 +3,7 @@
 body{
 	font-family: georgia;
 	background: #abb2ff;
+	margin: 0;
 }
 
 #container{
@@ -48,6 +49,13 @@ form.login{
 button.input{
 	width: 100%;
 	cursor: pointer;
+}
+
+#pc{
+	position: absolute;
+	width: 250px;
+    top: 217px;
+    right: -120px;
 }
 
 @keyframes container{
