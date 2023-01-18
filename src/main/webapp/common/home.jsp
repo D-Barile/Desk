@@ -24,7 +24,6 @@
 		<div id="card${d.getId_desk()}" class="card">
 			<img id="desk" alt="desk" src="https://www.freeiconspng.com/thumbs/desk-png/school-desk-png-18.png">
 			<h2>${d.getId_desk()}</h2>
-			<h2>${d.getWorker()}</h2>
 			<a class="query" href="${pageContext.request.contextPath}/rimuovi-scrivania?id=${d.getId_desk()}">Rimuovi</a>
 		</div>
 	</c:forEach>

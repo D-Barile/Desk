@@ -30,7 +30,7 @@ public class AddDeskServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Desk d = new Desk();
-//		d.setId_desk(null);
+		d.setNome("Scrivania");
 		service.insert(d);
 		resp.sendRedirect("http://localhost:8080/Desk/home");
 	}

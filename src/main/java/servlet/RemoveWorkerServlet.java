@@ -22,7 +22,7 @@ public class RemoveWorkerServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Worker w = service.getById(Long.parseLong(req.getParameter("id")));
-		
+
 		service.remove(w);
 		
 		resp.sendRedirect("http://localhost:8080/Desk/home");
