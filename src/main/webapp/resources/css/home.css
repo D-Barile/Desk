@@ -1,24 +1,34 @@
 @charset "ISO-8859-1";
 
-a{
+#add{
 	top: 120px;
 	left: 20px;
-    position: absolute;
-    padding: 20px;
-    border-radius: 20px;
-	background: #edededd9;
+	position: absolute;
+}
+
+section{
+	margin-top: 175px;
 }
 
 .card{
 	width: 18%;
     height: 400px;
     background: red;
-    margin: 195px 50px;
+    margin: 20px 50px;
     border-radius: 15%;
-    display: inline-block;
+	display: inline-table;
     text-align: center;
 }
 
 img{
 	width: 130px;
+}
+
+.query{
+	position: relative;
+	padding: 20px;
+    border-radius: 20px;
+	background: #edededd9;
+	top: 30px;
+	margin: 0 15px 0 15px;
 }

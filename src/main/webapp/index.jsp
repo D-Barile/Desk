@@ -24,6 +24,7 @@
 				<jsp:include page="login.jsp"></jsp:include>
 		<%
 			}else{
+				response.sendRedirect("http://localhost:8080/Desk/home");
 		%>
 				<jsp:include page="common/home.jsp"></jsp:include>
 				<jsp:include page="common/header.jsp"></jsp:include>

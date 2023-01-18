@@ -1,6 +1,6 @@
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c' %>
 
-<a href="${pageContext.request.contextPath}/aggiungi-dipendente">Aggiungi dipendente</a>
+<a id="add" class="query" href="${pageContext.request.contextPath}/aggiungi-dipendente">Aggiungi dipendente</a>
 
 <section>
 	<c:forEach var="w" items='<%=request.getAttribute("workers") %>'>
@@ -11,6 +11,8 @@
 			<h2>${w.getCognome()}</h2>
 			<h3>${w.getEta()}</h3>
 			<p>${w.getDescrizione()}</p>
+			<a class="query" href="${pageContext.request.contextPath}/rimuovi-dipendente?id=${w.getId_worker()}">Rimuovi</a>
+			<a class="query" href="${pageContext.request.contextPath}/aggiorna-dipendente?id=${w.getId_worker()}">Aggiorna</a>
 		</div>
 	</c:forEach>
 </section>

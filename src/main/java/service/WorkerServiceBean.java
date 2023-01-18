@@ -25,5 +25,20 @@ public class WorkerServiceBean implements WorkerServiceBeanLocal, WorkerServiceB
     public void insert(Worker w) {
     	manager.persist(w);
     }
+
+	@Override
+	public Worker getById(Long id) {
+		return manager.find(Worker.class, id);
+	}
+
+	@Override
+	public void remove(Worker w) {
+		manager.remove(manager.merge(w));
+	}
+
+	@Override
+	public Worker update(Worker w) {
+		return manager.merge(w);
+	}
     
 }
