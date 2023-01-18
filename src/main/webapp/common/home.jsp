@@ -1,6 +1,7 @@
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c' %>
 
-<a id="add" class="query" href="${pageContext.request.contextPath}/aggiungi-dipendente">Aggiungi dipendente</a>
+<a id="addW" class="query" href="${pageContext.request.contextPath}/aggiungi-dipendente">Aggiungi dipendente</a>
+<a id="addD" class="query" href="${pageContext.request.contextPath}/aggiungi-dipendente">Aggiungi scrivania</a>
 
 <section>
 	<c:forEach var="w" items='<%=request.getAttribute("workers") %>'>
@@ -11,8 +12,21 @@
 			<h2>${w.getCognome()}</h2>
 			<h3>${w.getEta()}</h3>
 			<p>${w.getDescrizione()}</p>
+			<p>${w.getDesk()}</p>
 			<a class="query" href="${pageContext.request.contextPath}/rimuovi-dipendente?id=${w.getId_worker()}">Rimuovi</a>
 			<a class="query" href="${pageContext.request.contextPath}/aggiorna-dipendente?id=${w.getId_worker()}">Aggiorna</a>
 		</div>
 	</c:forEach>
 </section>
+
+<section>
+	<c:forEach var="d" items='<%=request.getAttribute("desks") %>'>
+		<div id="card${d.getId_desk()}" class="card">
+			<h2>${d.getId_desk()}</h2>
+			<img alt="desk" src="https://www.freeiconspng.com/thumbs/desk-png/school-desk-png-18.png">
+			<a class="query" href="${pageContext.request.contextPath}/rimuovi-scrivania?id=${d.getId_desk()}">Rimuovi</a>
+			<a class="query" href="${pageContext.request.contextPath}/aggiorna-scrivania?id=${d.getId_desk()}">Aggiorna</a>
+		</div>
+	</c:forEach>
+</section>
+

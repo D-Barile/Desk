@@ -1,8 +1,14 @@
 @charset "ISO-8859-1";
 
-#add{
+#addW{
 	top: 120px;
 	left: 20px;
+	position: absolute;
+}
+
+#addD{
+	top: 120px;
+	left: 220px;
 	position: absolute;
 }
 

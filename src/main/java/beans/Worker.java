@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +19,9 @@ public class Worker {
 	private String cognome;
 	private int eta;
 	private String descrizione;
+	@OneToOne
+	@JoinColumn(name = "id_desk", referencedColumnName = "id_desk")
+	private Desk desk;
 	
 	public Worker() {
 		
@@ -25,7 +30,6 @@ public class Worker {
 	public Long getId_worker() {
 		return id_worker;
 	}
-
 
 	public void setId_worker(Long id_worker) {
 		this.id_worker = id_worker;
@@ -61,6 +65,14 @@ public class Worker {
 	
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
+	}
+
+	public Desk getDesk() {
+		return desk;
+	}
+
+	public void setDesk(Desk desk) {
+		this.desk = desk;
 	}
 	
 }

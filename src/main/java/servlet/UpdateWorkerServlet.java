@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import beans.Desk;
 import beans.Worker;
 import service.WorkerServiceBeanLocal;
 
@@ -29,11 +30,14 @@ public class UpdateWorkerServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Worker w = new Worker();
+		Desk d = new Desk();
 		w.setId_worker(Long.parseLong(req.getParameter("id")));
 		w.setNome(req.getParameter("nome"));
 		w.setCognome(req.getParameter("cognome"));
 		w.setEta(Integer.parseInt(req.getParameter("eta")));
 		w.setDescrizione(req.getParameter("descrizione"));
+		d.setId_desk(Long.parseLong(req.getParameter("scrivania")));
+		w.setDesk(d);
 		
 		service.update(w);
 		

@@ -24,6 +24,9 @@
 				<input class="input" type="text" name="descrizione"value="${worker.getDescrizione()}" placeholder="Descrizione">
 				<br />
 				<br />
+				<input class="input" type="number" name="scrivania" placeholder="${worker.getDesk()}">
+				<br />
+				<br />
 				<button class="btn" type="submit">Invia dati</button>
 			</form>
 		</div>

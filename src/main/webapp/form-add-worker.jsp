@@ -23,6 +23,9 @@
 				<input class="input" type="text" name="descrizione" placeholder="Descrizione">
 				<br />
 				<br />
+				<input class="input" type="number" name="scrivania" placeholder="Scrivania">
+				<br />
+				<br />
 				<button class="btn" type="submit">Invia dati</button>
 			</form>
 		</div>
