@@ -74,5 +74,12 @@ public class Worker {
 	public void setDesk(Desk desk) {
 		this.desk = desk;
 	}
+
+	@Override
+	public String toString() {
+		return nome + " " + cognome;
+	}
+	
+	
 	
 }

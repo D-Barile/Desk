@@ -1,5 +1,6 @@
 package beans;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +15,7 @@ public class Desk {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_desk;
-	@OneToOne(mappedBy = "desk")
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "desk")
 	private Worker worker;
 	
 	public Desk() {
@@ -43,3 +44,4 @@ public class Desk {
 	}
 	
 }
+

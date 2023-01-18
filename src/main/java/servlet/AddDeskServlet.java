@@ -10,35 +10,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import beans.Desk;
-import beans.Worker;
-import service.WorkerServiceBeanLocal;
+import service.DeskServiceBeanLocal;
 
-@WebServlet("/aggiorna-dipendente")
-public class UpdateWorkerServlet extends HttpServlet {
+/**
+ * Servlet implementation class AddDeskServlet
+ */
+@WebServlet("/aggiungi-scrivania")
+public class AddDeskServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+       
 	@EJB
-	WorkerServiceBeanLocal service;
+	DeskServiceBeanLocal service;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		Worker w = service.getById(Long.parseLong(req.getParameter("id")));
-		req.setAttribute("worker", w);
-		req.getRequestDispatcher("form-update-worker.jsp").forward(req, resp);
+		doPost(req, resp);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		Worker w = new Worker();
 		Desk d = new Desk();
-		w.setId_worker(Long.parseLong(req.getParameter("id")));
-		w.setNome(req.getParameter("nome"));
-		w.setCognome(req.getParameter("cognome"));
-		w.setEta(Integer.parseInt(req.getParameter("eta")));
-		w.setDescrizione(req.getParameter("descrizione"));
-		
-		service.update(w);
-		
+//		d.setId_desk(null);
+		service.insert(d);
 		resp.sendRedirect("http://localhost:8080/Desk/home");
 	}
 

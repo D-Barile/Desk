@@ -1,7 +1,7 @@
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c' %>
 
 <a id="addW" class="query" href="${pageContext.request.contextPath}/aggiungi-dipendente">Aggiungi dipendente</a>
-<a id="addD" class="query" href="${pageContext.request.contextPath}/aggiungi-dipendente">Aggiungi scrivania</a>
+<a id="addD" class="query" href="${pageContext.request.contextPath}/aggiungi-scrivania">Aggiungi scrivania</a>
 
 <section>
 	<c:forEach var="w" items='<%=request.getAttribute("workers") %>'>
@@ -22,10 +22,10 @@
 <section>
 	<c:forEach var="d" items='<%=request.getAttribute("desks") %>'>
 		<div id="card${d.getId_desk()}" class="card">
+			<img id="desk" alt="desk" src="https://www.freeiconspng.com/thumbs/desk-png/school-desk-png-18.png">
 			<h2>${d.getId_desk()}</h2>
-			<img alt="desk" src="https://www.freeiconspng.com/thumbs/desk-png/school-desk-png-18.png">
+			<h2>${d.getWorker()}</h2>
 			<a class="query" href="${pageContext.request.contextPath}/rimuovi-scrivania?id=${d.getId_desk()}">Rimuovi</a>
-			<a class="query" href="${pageContext.request.contextPath}/aggiorna-scrivania?id=${d.getId_desk()}">Aggiorna</a>
 		</div>
 	</c:forEach>
 </section>
