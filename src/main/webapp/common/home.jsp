@@ -27,18 +27,3 @@
 		</c:forEach>
 	</div>
 </section>
-
-
-<section>
-		<c:forEach var="d" items='<%=request.getAttribute("") %>'>
-			<div id="card${d.getId_desk()}" class="">
-				<img id="desk" alt="desk" src="https://www.freeiconspng.com/thumbs/desk-png/school-desk-png-18.png">
-				<h2>${d.getId_desk()}</h2>
-				<a class="query" href="${pageContext.request.contextPath}/rimuovi-dipendente?id=${w.getId_worker()}">Rimuovi dipendente</a>
-				<a class="query" href="${pageContext.request.contextPath}/aggiorna-dipendente?id=${w.getId_worker()}">Aggiorna dipendente</a>
-				<a class="query" href="${pageContext.request.contextPath}/rimuovi-scrivania?id=${d.getId_desk()}">Rimuovi scrivania</a>
-			</div>
-		</c:forEach>
-</section>
-
-
