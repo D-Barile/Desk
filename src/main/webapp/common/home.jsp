@@ -13,6 +13,8 @@
 				<h2>${w.getCognome()}</h2>
 				<h3>${w.getEta()}</h3>
 				<p>${w.getDescrizione()}</p>
+				<a hidden="true" id="remove" class="a" href="${pageContext.request.contextPath}/rimuovi-dipendente?id=${w.getId_worker()}">Rimuovi dipendente</a>
+				<a hidden="true" id="update" class="a" href="${pageContext.request.contextPath}/aggiorna-dipendente?id=${w.getId_worker()}">Aggiorna dipendente</a>
 			</div>
 		</c:forEach>
 		<c:forEach var="d" items='<%=request.getAttribute("desks") %>'>
