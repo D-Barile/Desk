@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
 			currentSession.setMaxInactiveInterval(5 * 60);
 			resp.sendRedirect("index.jsp");
 		}else {
-			resp.sendRedirect("login.jsp");
+			resp.sendRedirect("http://localhost:8080/Desk");
 		}
 	}
 
