@@ -7,14 +7,12 @@
 	<div class="card-inner">
 		<c:forEach var="w" items='<%=request.getAttribute("workers") %>'>
 			<div id="card-worker${w.getId_worker()}" class="front">
-				<div class="real-card">
-					<p hidden="true">${w.getId_worker()}</p>
-					<img alt="profile" src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
-					<h2>${w.getNome()}</h2>
-					<h2>${w.getCognome()}</h2>
-					<h3>${w.getEta()}</h3>
-					<p>${w.getDescrizione()}</p>
-				</div>
+				<p hidden="true">${w.getId_worker()}</p>
+				<img alt="profile" src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
+				<h2>${w.getNome()}</h2>
+				<h2>${w.getCognome()}</h2>
+				<h3>${w.getEta()}</h3>
+				<p>${w.getDescrizione()}</p>
 			</div>
 		</c:forEach>
 		<c:forEach var="d" items='<%=request.getAttribute("desks") %>'>
