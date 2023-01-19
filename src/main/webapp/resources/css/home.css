@@ -17,7 +17,6 @@
 	margin-left: 2%;
 	width: 300px;
 	height: 200px;
-	perspective: 100%;
 }
 
 .card-inner{
@@ -36,32 +35,56 @@
 .front, .back{
 	position: absolute;
 	width: 100%;
-	height: fit-content;
 	backface-visibility: hidden;
-}
-
-.front{
+	border-radius: 50px;
 	background: red;
 }
 
+.front{
+	padding: 10px;
+}
+
 .back{
-	background: blue;
 	transform: rotateY(180deg);
+	height: 350px;
 }
 
 img{
 	width: 130px;
 }
 
+.real-card{
+	
+}
+
+#remove{
+	left: -10px;
+}
+
+#update{
+	right: -10px;
+}
+
 #desk{
 	margin-top: 20%;
 }
 
-.query{
+.a{
+	position: absolute;
+	top: 100%;
+	padding: 5px;
+	background: #edededd9;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+#desk-a{
+	position: initial;
+}
+
+.button{
 	position: relative;
 	padding: 20px;
     border-radius: 20px;
 	background: #edededd9;
-	top: 30px;
-	margin: 0 15px 0 15px;
 }
