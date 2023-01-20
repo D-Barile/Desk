@@ -11,6 +11,7 @@
 		<div class="card">
 			<form action="${pageContext.request.contextPath}/aggiorna-dipendente" method="POST">
 				<img alt="profile" src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
+				<br />
 				<input type="number" name="id" hidden="true" value="${worker.getId_worker()}">
 				<input class="input" type="text" name="nome" value="${worker.getNome()}">
 				<br />

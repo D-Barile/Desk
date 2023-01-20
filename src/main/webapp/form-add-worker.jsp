@@ -11,6 +11,7 @@
 		<div class="card">
 			<form action="${pageContext.request.contextPath}/aggiungi-dipendente" method="POST">
 				<img alt="profile" src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png">
+				<br />
 				<input class="input" type="text" name="nome" placeholder="Nome">
 				<br />
 				<br />
